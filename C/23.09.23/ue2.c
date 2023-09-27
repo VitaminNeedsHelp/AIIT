@@ -1,5 +1,3 @@
-//Schreibe ein C-Programm um 3 Zahlen aufsteigend bzw. absteigend zu sortieren. Verwende dafür zwei Funktionen (aufsteigend/absteigend) mit Referenzparameter. Die Zahlen sollen über die Tastatur eingelesen werden.
-
 #include <stdio.h>
 #include <stdlib.h>
 
