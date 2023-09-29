@@ -8,7 +8,7 @@ int test(int numerator, int denominator, int div_result, int div_remainder);
 int main(void){
     int numerator = 0, denominator = 0;
     int div_result = 0, div_remainder = 0;
-    printf("Divisionsberechnung mit Restangabe\n*******************************\n");
+    printf("Divisionsberechnung mit Restangabe\xB8\n*******************************\n");
 
     printf("Z\x84hler eingeben [0-9999]: ");
     fflush(stdin);
