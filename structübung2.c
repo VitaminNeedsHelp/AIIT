@@ -13,7 +13,7 @@ struct BAUSTEIN
 
 void eingabeBS(struct BAUSTEIN *bs);
 void ausgabeBS(struct BAUSTEIN bs);
-int compareBS(struct BAUSTEIN bs1, struct BAUSTEIN bs2);
+void compareBS(struct BAUSTEIN bs1, struct BAUSTEIN bs2);
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
     ausgabeBS(bs1);
     printf("Baustein 2:\n");
     ausgabeBS(bs2);
-    printf("Vergleich: %d\n", compareBS(bs1, bs2));
+    compareBS(bs1, bs2);
     return 0;
 }
 
@@ -55,20 +55,23 @@ void ausgabeBS(struct BAUSTEIN bs)
     printf("Name: %s\n", bs.name);
 }
 
-int compareBS(struct BAUSTEIN bs1, struct BAUSTEIN bs2)
+void compareBS(struct BAUSTEIN bs1, struct BAUSTEIN bs2)
 {
     int v1 = bs1.laenge * bs1.breite * bs1.hoehe;
     int v2 = bs2.laenge * bs2.breite * bs2.hoehe;
+    int vv = 0;
     if (v1 > v2)
     {
-        return 1;
+        vv = v1 - v2;
+        printf("Baustein 1 ist %d cm3 groesser als Baustein 2", vv);
     }
     else if (v1 < v2)
     {
-        return -1;
+        vv = v2 - v1;
+        printf("Baustein 2 ist %d cm3 groesser als Baustein 1", vv);
     }
     else
     {
-        return 0;
+        printf("Baustein 1 und Baustein 2 sind gleich gross");
     }
 }
